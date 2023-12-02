@@ -1,26 +1,46 @@
-//
-//  ContentView.swift
-//  FirstApp
-//
-//  Created by Kevin Van Rooy on 30/11/2023.
-//
-
 import SwiftUI
-import RealityKit
-import RealityKitContent
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Model3D(named: "Scene", bundle: realityKitContentBundle)
-                .padding(.bottom, 50)
+        NavigationView {
+            
+        VStack() {
+            ZStack(){
+                
+                Circle().opacity(0.25)
+                Text("Mijn \n VisionOS \n demo")
+                    .multilineTextAlignment(.center)
+            }.padding(.bottom, 60.0)
 
-            Text("Hello, world!")
+            VStack() {
+                NavigationLink(destination: WindowView()) {
+                    Text("Window")
+                        .padding()
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
+                NavigationLink(destination: VolumeView()) {
+                    Text("Volume")
+                        .padding()
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
+                
+                NavigationLink(destination: SpaceView()) {
+                    Text("Space")
+                        .padding()
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
+            }.padding(.bottom, 50.0)
+            }.navigationBarTitle("Navigation")
         }
-        .padding()
     }
 }
 
-#Preview(windowStyle: .automatic) {
-    ContentView()
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
 }
