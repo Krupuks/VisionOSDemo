@@ -17,7 +17,7 @@ struct ContentView: View {
                     Text("Mijn \n VisionOS \n demo")
                         .multilineTextAlignment(.center)
                 }
-                .padding(.bottom, 60.0)
+                .padding(.all, 20.0)
 
                 VStack {
                     NavigationLink(destination: WindowView()) {
@@ -57,8 +57,9 @@ struct ContentView: View {
     }
 }
 /*
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}*/
+ struct ContentView_Previews: PreviewProvider {
+ static var previews: some View {
+ ContentView()
+ }
+ }
+ */
