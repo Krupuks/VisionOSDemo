@@ -1,3 +1,10 @@
+//
+//  SpaceView.swift
+//  FirstApp
+//
+//  Created by Kevin Van Rooy on 02/12/2023.
+//
+
 import SwiftUI
 import RealityKit
 import RealityKitContent
@@ -17,9 +24,10 @@ struct VolumeView: View {
         }
     }
 }
-
+/*
 struct VolumeView_Previews: PreviewProvider {
     static var previews: some View {
         VolumeView()
     }
 }
+*/

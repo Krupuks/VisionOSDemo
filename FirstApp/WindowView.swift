@@ -19,10 +19,11 @@ struct WindowView: View {
             Text("Hello \(name)").font(.title).padding(.top, 20)
         }
     }
-    
+/*
     struct ContentView_Previews: PreviewProvider {
         static var previews: some View {
             WindowView()
         }
     }
 }
+*/
